@@ -4,6 +4,8 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/NavBar'
 import MessagesPage from './components/Messages'
+import LoginPage from './components/LoginPage'
+
 
 const COHORT_NAME = '2306-FSA-ET-WEB-FT-SF'
 const BASE_URL = `https://strangers-things.herokuapp.com/api/${COHORT_NAME}/posts`
@@ -36,6 +38,7 @@ function App() {
       <Routes>
         <Route path="/" element={<DisplayAllPosts allPosts={posts} />} />
         <Route path="/messages" element={<MessagesPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
 
     </>
