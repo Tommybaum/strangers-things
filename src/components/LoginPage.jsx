@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const API_URL = 'https://strangers-things.herokuapp.com/api/2306-FSA-ET-WEB-FT-SF/users/login';
 
-const LoginPage = () => {
+const LoginPage = ({onLogin}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -28,7 +28,7 @@ const LoginPage = () => {
         const token = data.data.token;
         console.log('Logged in successfully');
         console.log('Token:', token);
-        // You can store the token in localStorage or a state management solution
+        onLogin(token)
       } else {
         console.log('Login failed');
       }

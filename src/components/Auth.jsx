@@ -29,7 +29,7 @@ const RegistrationForm = () => {
             console.log(result)
             if (result.success) {
                 setRegistrationStatus('Registration successful');
-                // Optionally, you can perform additional actions like saving the token
+
             } else {
                 setRegistrationStatus(`Registration failed: ${result.error.message}`);
             }
@@ -69,4 +69,4 @@ const RegistrationForm = () => {
 
 export default RegistrationForm;
 
-        //this page is a work in progress, as I really have no idea how to acess tokens at this time
+   
