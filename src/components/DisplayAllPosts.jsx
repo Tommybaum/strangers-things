@@ -7,8 +7,10 @@ const DisplayAllPosts = ({ allPosts, authToken }) => {
     <>
     <PostActions authToken={authToken} />
       {allPosts.map((post) => (
-        <div key={post.id}>
-          <h1 key={post.id}>{post.title}</h1>
+        <div id='post-container'key={post._id}>
+          <h1>{post.title}</h1>
+          <h3>{post.price}</h3>
+          <p>{post.description}</p>
           
         </div>
       ))}
