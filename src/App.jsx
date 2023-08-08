@@ -37,7 +37,7 @@ function App() {
     fetchAllPosts()
 
   }, [])
-  console.log(posts)
+  
   return (
     <>
       <Navbar />

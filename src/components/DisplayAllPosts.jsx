@@ -1,7 +1,7 @@
 import PostActions from "./PostActions";
 
 const DisplayAllPosts = ({ allPosts, authToken }) => {
-    console.log(authToken)
+
   return (
    
     <>
@@ -11,6 +11,7 @@ const DisplayAllPosts = ({ allPosts, authToken }) => {
           <h1>{post.title}</h1>
           <h3>{post.price}</h3>
           <p>{post.description}</p>
+          <button>Delete Post</button>
           
         </div>
       ))}
