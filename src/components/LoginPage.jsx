@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-
+import  { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 const API_URL = 'https://strangers-things.herokuapp.com/api/2306-FSA-ET-WEB-FT-SF/users/login';
 
 const LoginPage = ({onLogin}) => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -26,9 +27,11 @@ const LoginPage = ({onLogin}) => {
       if (response.ok) {
         const data = await response.json();
         const token = data.data.token;
+        onLogin(token); // Pass token
         console.log('Logged in successfully');
         console.log('Token:', token);
-        onLogin(token)
+        // Redirect to the posts page
+        navigate('/posts');
       } else {
         console.log('Login failed');
       }

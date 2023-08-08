@@ -42,10 +42,10 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/posts" element={<DisplayAllPosts allPosts={posts} />} />
+        
         
         <Route
-          path="/login"
+          path="/"
           element={<LoginPage onLogin={handleLogin} />}
         />
         <Route path="/register" element={<RegistrationForm />} />
